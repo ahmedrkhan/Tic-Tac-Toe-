@@ -1,0 +1,121 @@
+* {
+    padding: 0;
+    /* Remove all inner spacing */
+    /* margin: 0;               Remove all outer spacing */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+    body {
+        text-align: center;
+        /* Center text horizontally */
+        background-color: #548687;
+        /* Teal background for body */
+    }
+
+    h1 {
+        justify-content: center;
+        /* Horizontally center content */
+        align-items: center;
+        /* Vertically center content */
+        display: flex;
+        /* Enables Flexbox layout */
+        font-size: 12vh;
+        /* Heading text very large */
+        color: beige;
+
+    }
+
+    .container {
+        /* height: 120vh;           Full viewport height */
+        display: flex;
+        /* Use Flexbox layout */
+        align-items: center;
+        /* Vertically center children */
+        justify-content: center;
+        /* Horizontally center children */
+    }
+
+    .game {
+        padding-top: 0%;
+        height: 52vh;
+        /* 80% viewport height */
+        width: 50vh;
+        /* 80% viewport width */
+        justify-content: center;
+        /* Center inner boxes horizontally */
+        align-items: center;
+        /* Center inner boxes vertically */
+        display: flex;
+        /* Use Flexbox layout */
+        flex-wrap: wrap;
+        /* Allow wrapping to next line */
+        gap: 1.5vmin;
+        /* Space between boxes */
+        background-color: rgb(255, 255, 255);
+        /* White background */
+    }
+
+    .box {
+        width: 15vh;
+        /* Box width is 25vh */
+        height: 15vh;
+        /* Box height is 25vh */
+        background-color: burlywood;
+        /* Light brown color */
+        color: black;
+        /* Text color is black */
+        display: flex;
+        /* Use Flexbox for content */
+        gap: 5px;
+        /* Spacing inside box (redundant) */
+        border-radius: 10px;
+        /* Rounded corners */
+        gap: 1.5vmin;
+        /* Inner spacing (duplicate line) */
+        flex-wrap: wrap;
+        /* Wrap inner content (not needed) */
+        font-size: 10vh;
+        /* Very large text size */
+        border: 10px dark black;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .reset {
+        width: 100px;
+        /* Very large button width */
+        height: 30px;
+        /* Very large button height */
+        background-color: rgb(220, 12, 12);
+        /* Black background */
+        color: aliceblue;
+        font-size: 3vh;
+        /* Large font inside button */
+        padding-top: 0%;
+        margin-top: 40px;
+
+
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .msg-container {
+        color: rgb(1, 1, 1);
+        font-size: 50px;
+        margin: 400px;
+        ;
+        margin-top: 200px;
+    }
+
+    .new-btn {
+        width: 100px;
+        /* Very large button width */
+        height: 80px;
+        /* Very large button height */
+        background-color: rgb(220, 12, 12);
+        /* Black background */
+        color: aliceblue;
+        font-size: 3vh;
+        /* Large font inside button */
+    }
