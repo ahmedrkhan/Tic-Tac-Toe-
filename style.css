@@ -1,121 +1,149 @@
+/* Base Reset */
 * {
+    margin: 0;
     padding: 0;
-    /* Remove all inner spacing */
-    /* margin: 0;               Remove all outer spacing */
+    box-sizing: border-box;
     font-family: Georgia, 'Times New Roman', Times, serif;
+}
 
-    body {
-        text-align: center;
-        /* Center text horizontally */
-        background-color: #548687;
-        /* Teal background for body */
-    }
+body {
+    text-align: center;
+    background-color: #548687;
+    min-height: 100vh;
+}
 
-    h1 {
-        justify-content: center;
-        /* Horizontally center content */
-        align-items: center;
-        /* Vertically center content */
-        display: flex;
-        /* Enables Flexbox layout */
-        font-size: 12vh;
-        /* Heading text very large */
-        color: beige;
+/* Heading Style */
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 6vw;
+    color: beige;
+    margin: 20px 0;
+}
 
-    }
+/* Game Container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
 
-    .container {
-        /* height: 120vh;           Full viewport height */
-        display: flex;
-        /* Use Flexbox layout */
-        align-items: center;
-        /* Vertically center children */
-        justify-content: center;
-        /* Horizontally center children */
-    }
+/* Game Box Grid */
+.game {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vmin;
+    background-color: white;
+    width: 90vmin;
+    height: 90vmin;
+    max-width: 500px;
+    max-height: 500px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
 
+/* Each Box */
+.box {
+    width: 28%;
+    height: 28%;
+    background-color: burlywood;
+    color: black;
+    font-size: 10vmin;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.box:hover {
+    transform: scale(1.05);
+}
+
+/* Buttons */
+.reset,
+.new-btn {
+    width: 120px;
+    height: 40px;
+    background-color: rgb(220, 12, 12);
+    color: aliceblue;
+    font-size: 2.5vmin;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.reset:hover,
+.new-btn:hover {
+    background-color: rgb(180, 0, 0);
+}
+
+/* Hidden Class */
+.hide {
+    display: none;
+}
+
+/* Message Container */
+.msg-container {
+    color: rgb(1, 1, 1);
+    font-size: 4vmin;
+    margin-top: 40px;
+}
+
+/* ============================= */
+/* MEDIA QUERIES FOR RESPONSIVENESS */
+/* ============================= */
+
+/* For small phones */
+@media (max-width: 480px) {
     .game {
-        padding-top: 0%;
-        height: 52vh;
-        /* 80% viewport height */
-        width: 50vh;
-        /* 80% viewport width */
-        justify-content: center;
-        /* Center inner boxes horizontally */
-        align-items: center;
-        /* Center inner boxes vertically */
-        display: flex;
-        /* Use Flexbox layout */
-        flex-wrap: wrap;
-        /* Allow wrapping to next line */
-        gap: 1.5vmin;
-        /* Space between boxes */
-        background-color: rgb(255, 255, 255);
-        /* White background */
+        width: 90vw;
+        height: 90vw;
     }
 
     .box {
-        width: 15vh;
-        /* Box width is 25vh */
-        height: 15vh;
-        /* Box height is 25vh */
-        background-color: burlywood;
-        /* Light brown color */
-        color: black;
-        /* Text color is black */
-        display: flex;
-        /* Use Flexbox for content */
-        gap: 5px;
-        /* Spacing inside box (redundant) */
-        border-radius: 10px;
-        /* Rounded corners */
-        gap: 1.5vmin;
-        /* Inner spacing (duplicate line) */
-        flex-wrap: wrap;
-        /* Wrap inner content (not needed) */
-        font-size: 10vh;
-        /* Very large text size */
-        border: 10px dark black;
-        justify-content: center;
-        align-items: center;
+        font-size: 12vw;
     }
 
-    .reset {
+    h1 {
+        font-size: 10vw;
+    }
+
+    .reset,
+    .new-btn {
         width: 100px;
-        /* Very large button width */
-        height: 30px;
-        /* Very large button height */
-        background-color: rgb(220, 12, 12);
-        /* Black background */
-        color: aliceblue;
-        font-size: 3vh;
-        /* Large font inside button */
-        padding-top: 0%;
-        margin-top: 40px;
-
-
-    }
-
-    .hide {
-        display: none;
+        height: 35px;
+        font-size: 4vw;
     }
 
     .msg-container {
-        color: rgb(1, 1, 1);
-        font-size: 50px;
-        margin: 400px;
-        ;
-        margin-top: 200px;
+        font-size: 6vw;
+    }
+}
+
+/* For tablets and small laptops */
+@media (min-width: 481px) and (max-width: 1024px) {
+    .game {
+        width: 80vmin;
+        height: 80vmin;
     }
 
-    .new-btn {
-        width: 100px;
-        /* Very large button width */
-        height: 80px;
-        /* Very large button height */
-        background-color: rgb(220, 12, 12);
-        /* Black background */
-        color: aliceblue;
-        font-size: 3vh;
-        /* Large font inside button */
+    .box {
+        font-size: 8vmin;
     }
+
+    h1 {
+        font-size: 5vw;
+    }
+
+    .msg-container {
+        font-size: 5vw;
+    }
+}
